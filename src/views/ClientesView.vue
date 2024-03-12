@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RouterLink from '@/components/UI/RouterLink.vue';
+import Heading from '@/components/UI/Heading.vue'
 </script>
 <template>
     <div>
@@ -9,7 +10,7 @@ import RouterLink from '@/components/UI/RouterLink.vue';
             </RouterLink>
 
         </div>
-        <h1 class="text-4xl font-extrabold text-slate-500">Clientes</h1>
+        <Heading>Clientes</Heading>
     </div>
     
 </template>
