@@ -1,8 +1,14 @@
 <script setup lang="ts">
-
+import axios from 'axios';
+import { onMounted } from 'vue';
 import RouterLink from '@/components/UI/RouterLink.vue';
 import Heading from '@/components/UI/Heading.vue'
 
+onMounted(()=>{
+    axios.get("http://localhost:3000/clientes").then(({data}) =>{
+        console.log(data)
+    })
+})
 defineProps({
     titulo: {
         type: String
