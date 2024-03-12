@@ -7,6 +7,10 @@ defineProps({
         type: String,
     }
 })
+
+const handleSubmit = (data:Object)=>{
+    console.log(data)
+}
 </script>
 <template>
     <div>
@@ -19,11 +23,12 @@ defineProps({
 
         <div class="mx-auto mt-10 bg-white shadow">
             <div class="mx-auto md:w-2/3 py-20 px-6">
-                <FormKit type="form">
+                <FormKit type="form" submit-label="Agregar Cliente" incomplete-message="No se pudo enviar, revisa los mensajes" @submit="handleSubmit">
 
                     <FormKit 
                         type="text" 
                         label="Nombre" 
+                        name="nombre"
                         placeholder="Nombre del Cliente"
                         validation="required"
                         :validation-messages="{ required: 'El nombre del cliente es obligatorio' }"
@@ -33,6 +38,7 @@ defineProps({
                     <FormKit 
                         type="text" 
                         label="Apellido" 
+                        name="apellido"
                         placeholder="Apellido del Cliente"
                         validation="required"
                         :validation-messages="{ required: 'El apellido del cliente es obligatorio' }"
@@ -42,6 +48,7 @@ defineProps({
                     <FormKit 
                         type="text" 
                         label="Email" 
+                        name="email"
                         placeholder="Email del Cliente"
                         validation="required|email"
                         :validation-messages="{ required: 'El email del cliente es obligatorio' ,email:'Coloca un email valido'}"
@@ -51,12 +58,27 @@ defineProps({
                     <FormKit 
                         type="text" 
                         label="Telefono" 
+                        name="telefono"
                         placeholder="Telefono: XXX-XXX-XXXX"
-                        validation="required|number"
-                        :validation-messages="{ required: 'El email del cliente es obligatorio' ,number:'Coloca un telefono valido'}"
+                        validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+                        :validation-messages="{ matches: 'El formato no es valido'}"
                        >
                     </FormKit>
 
+                    <FormKit 
+                        type="text" 
+                        label="Empresa" 
+                        name="empresa"
+                        placeholder="Empresa de Cliente"
+                       >
+                    </FormKit>
+
+                    <FormKit 
+                        type="text" 
+                        label="Puesto" 
+                        name="puesto"
+                        placeholder="Puesto de Cliente">
+                    </FormKit>
                     
 
                 </FormKit>
