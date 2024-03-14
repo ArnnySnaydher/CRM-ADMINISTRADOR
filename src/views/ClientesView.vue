@@ -8,7 +8,7 @@ const clientes = ref([])
 
 onMounted(() => {
     axios("http://localhost:3000/clientes")
-        .then(({ data }) => clientes.value = data)
+        .then(({ data }) => clientes.value=data)
         .catch(error => console.log(error))
 })
 defineProps({
@@ -37,7 +37,7 @@ const existenClientes = computed(() => {
                 <div class="min-w-full py-2 align-middle sm:px-6 lg:px-8">
                     <table class="min-w-full divide-y divide-gray-300">
                         <thead>
-                            <tr>
+                            <tr ">
                                 <th scope="col" class="p-2 text-left text-sm font-extrabold text-gray-600">Nombre</th>
                                 <th scope="col" class="p-2 text-left text-sm font-extrabold text-gray-600">Empresa</th>
                                 <th scope="col" class="p-2 text-left text-sm font-extrabold text-gray-600">Estado</th>
