@@ -7,7 +7,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'listado-clientes',
       component:Inicio,
       props:{titulo:"Listado de Clientes"}
 

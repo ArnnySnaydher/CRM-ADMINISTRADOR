@@ -3,6 +3,7 @@ import axios from 'axios';
 import { onMounted, ref, computed } from 'vue';
 import RouterLink from '@/components/UI/RouterLink.vue';
 import Heading from '@/components/UI/Heading.vue'
+import Cliente from '@/components/Cliente.vue';
 
 const clientes = ref([])
 
@@ -37,7 +38,7 @@ const existenClientes = computed(() => {
                 <div class="min-w-full py-2 align-middle sm:px-6 lg:px-8">
                     <table class="min-w-full divide-y divide-gray-300">
                         <thead>
-                            <tr ">
+                            <tr>
                                 <th scope="col" class="p-2 text-left text-sm font-extrabold text-gray-600">Nombre</th>
                                 <th scope="col" class="p-2 text-left text-sm font-extrabold text-gray-600">Empresa</th>
                                 <th scope="col" class="p-2 text-left text-sm font-extrabold text-gray-600">Estado</th>
@@ -45,7 +46,7 @@ const existenClientes = computed(() => {
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
-
+                            <Cliente v-for="cliente in clientes" :key="cliente.id" :cliente="cliente"></Cliente>
                         </tbody>
                     </table>
                 </div>
