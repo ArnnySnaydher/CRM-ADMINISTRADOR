@@ -1,36 +1,22 @@
 {
   "clientes": [
     {
-      "id": "85a5",
-      "nombre": "Arnny",
-      "apellido": "Quispe",
-      "email": "test1@gmail.com"
-    },
-    {
-      "id": "35ac",
-      "nombre": "Snaydher",
-      "apellido": "Loayza",
-      "email": "test2@gmail.com",
-      "telefono": "999-999-9999",
-      "empresa": "Google Inc",
-      "puesto": "Programador"
-    },
-    {
-      "id": "d648",
-      "nombre": "Jesus",
-      "apellido": "Nazaret",
-      "email": "test3@gmail.com",
-      "telefono": "888-888-8888",
-      "empresa": "Nvidia",
-      "puesto": "Desarrollador"
-    },
-    {
-      "id": "3d34",
+      "id": "40a1",
       "nombre": "test1",
       "apellido": "test1",
       "email": "test1@gmail.com",
       "empresa": "test1",
-      "puesto": "test1"
+      "puesto": "test1",
+      "estado": 1
+    },
+    {
+      "id": "cb3e",
+      "nombre": "test2",
+      "apellido": "test2",
+      "email": "test2@gmail.com",
+      "empresa": "test2",
+      "puesto": "test2",
+      "estado": 0
     }
   ]
 }
