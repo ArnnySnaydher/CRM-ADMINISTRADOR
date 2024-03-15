@@ -9,5 +9,8 @@ export default{
     },
     agregarCliente(data:modulo){
         return api.post("/clientes",data)
+    },
+    obtenerCliente(id:String){
+        return api.get('/clientes/'+ id)
     }
 }

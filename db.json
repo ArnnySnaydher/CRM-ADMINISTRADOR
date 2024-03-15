@@ -17,6 +17,16 @@
       "empresa": "test2",
       "puesto": "test2",
       "estado": 0
+    },
+    {
+      "id": "94cc",
+      "nombre": "Arnny",
+      "apellido": "Quispe",
+      "email": "arnny@gmail.com",
+      "telefono": "999-999-9999",
+      "empresa": "Google Inc",
+      "puesto": "Full Stack Jr",
+      "estado": 1
     }
   ]
 }
