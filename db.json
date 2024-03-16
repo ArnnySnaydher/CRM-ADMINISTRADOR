@@ -1,22 +1,24 @@
 {
   "clientes": [
     {
-      "id": "40a1",
-      "nombre": "test1",
-      "apellido": "test1",
-      "email": "test1@gmail.com",
+      "nombre": "Romel",
+      "apellido": "Carrasco",
+      "email": "romel@gmail.com",
       "empresa": "test1",
       "puesto": "test1",
-      "estado": 1
+      "estado": false,
+      "id": "40a1",
+      "telefono": ""
     },
     {
       "id": "cb3e",
-      "nombre": "test2",
-      "apellido": "test2",
-      "email": "test2@gmail.com",
+      "nombre": "Cristian",
+      "apellido": "Chipana",
+      "email": "cristian@gmail.com",
       "empresa": "test2",
       "puesto": "test2",
-      "estado": 0
+      "estado": false,
+      "telefono": ""
     },
     {
       "id": "94cc",
@@ -26,7 +28,16 @@
       "telefono": "999-999-9999",
       "empresa": "Google Inc",
       "puesto": "Full Stack Jr",
-      "estado": 1
+      "estado": true
+    },
+    {
+      "id": "d9a0",
+      "nombre": "test3",
+      "apellido": "test3",
+      "email": "test3@gmail.com",
+      "empresa": "test3",
+      "puesto": "test3",
+      "estado": true
     }
   ]
 }

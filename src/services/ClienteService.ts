@@ -1,16 +1,28 @@
 import api from "../lib/axios"
 
-interface modulo{
-    data:Object
+interface clienteData {
+    data: Object,
+    id: string
 }
-export default{
-    obtenerClientes(){
+export default {
+    obtenerClientes() {
         return api.get('/clientes')
     },
-    agregarCliente(data:modulo){
-        return api.post("/clientes",data)
+    agregarCliente(data: clienteData) {
+        return api.post("/clientes", data)
     },
-    obtenerCliente(id:String){
-        return api.get('/clientes/'+ id)
+    obtenerCliente(id: string) {
+        return api.get('/clientes/' + id)
+    },
+
+    actualizarCliente(id:string, data:clienteData) {
+        return api.patch('/clientes/' + id, data);
+    },
+    cambiarEstado(id: string, data:clienteData) {
+         return api.patch('/clientes/' + id, data)
+    },
+    eliminarCliente(id){
+        return api.delete('/clientes/' + id)
     }
+
 }

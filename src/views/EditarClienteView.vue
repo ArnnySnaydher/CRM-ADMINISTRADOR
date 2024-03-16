@@ -11,6 +11,12 @@ const route = useRoute()
 const { id } = route.params
 
 const formData = reactive({
+    nombre: '',
+    apellido: '',
+    email: '',
+    telefono: '',
+    empresa: '',
+    puesto: ''
 })
 
 onMounted(() => {
@@ -29,8 +35,10 @@ defineProps({
 })
 
 
-const handleSubmit = (data: any) => {
-
+const handleSubmit = (data:Object) => {
+    ClienteService.actualizarCliente(id, data)
+        .then(() => router.push({ name: 'listado-clientes' }))
+        .catch(error => console.log(error))
 }
 </script>
 <template>
@@ -44,7 +52,7 @@ const handleSubmit = (data: any) => {
 
         <div class="mx-auto mt-10 bg-white shadow">
             <div class="mx-auto md:w-2/3 py-20 px-6">
-                <FormKit type="form" submit-label="Actualizar Cliente"
+                <FormKit type="form" submit-label="Guardar cambios"
                     incomplete-message="No se pudo enviar, revisa los mensajes" @submit="handleSubmit"
                     :value="formData">
 
